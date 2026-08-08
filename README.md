@@ -16,7 +16,6 @@ Zweisprachige, responsive und barrierearme Website aus reinem HTML, CSS und Vani
 │   ├── fonts/
 │   ├── images/
 │   └── js/main.js
-├── .github/workflows/deploy.yml
 ├── .nojekyll
 ├── 404.html
 ├── robots.txt
@@ -44,8 +43,8 @@ Zweisprachige, responsive und barrierearme Website aus reinem HTML, CSS und Vani
    git push -u origin main
    ```
 
-3. Im Repository **Settings → Pages** öffnen. Unter **Build and deployment** als Quelle **GitHub Actions** wählen.
-4. Der Workflow `Deploy static website to GitHub Pages` startet bei jedem Push auf `main`. Nach erfolgreichem Lauf ist die Seite unter `https://jungbauernico.github.io/` erreichbar.
+3. Im Repository **Settings → Pages** öffnen. Unter **Build and deployment** als Quelle **Deploy from a branch**, den Branch **main** und den Ordner **/(root)** wählen.
+4. GitHub Pages veröffentlicht die Website nach jedem Push auf `main` automatisch. Nach erfolgreichem Lauf ist die Seite unter `https://jungbauernico.github.io/` erreichbar.
 5. Unter **Settings → Pages** die Option **Enforce HTTPS** aktivieren, sobald sie verfügbar ist.
 
 ## Spätere eigene .de-Domain
@@ -69,7 +68,7 @@ Für `www.beispiel.de` zusätzlich:
 
 Optional können die von GitHub dokumentierten AAAA-Records ergänzt werden. Keine Wildcard-DNS-Einträge wie `*.beispiel.de` verwenden. DNS-Änderungen können bis zu 24 Stunden benötigen. Danach in GitHub **Enforce HTTPS** aktivieren.
 
-Bei der hier verwendeten Veröffentlichung per GitHub Actions wird eine `CNAME`-Datei im Repository nicht benötigt; maßgeblich ist die Domain-Einstellung unter **Settings → Pages**.
+Bei der hier verwendeten Veröffentlichung aus dem `main`-Branch verwaltet GitHub die `CNAME`-Datei beim Speichern der Domain-Einstellung. Diese automatisch erzeugte Datei anschließend nicht löschen.
 
 ## Lokale Vorschau
 
