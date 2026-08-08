@@ -937,18 +937,18 @@ a.publication-card:hover .publication-card__arrow {
   transform: none;
 }
 
-.js .panel-media--focus-reveal.reveal {
-  opacity: 1;
-  filter: blur(0.2rem);
-  transform: scale(1.018);
-  transition:
-    filter 850ms var(--ease),
-    transform 950ms var(--ease);
+.js .panel-media--focus-reveal::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background-color: rgba(38, 38, 38, 0.741);
+  content: "";
+  pointer-events: none;
+  transition: background-color 1.5s ease;
 }
 
-.js .panel-media--focus-reveal.reveal.is-visible {
-  filter: none;
-  transform: none;
+.js .panel-media--focus-reveal.is-visible::after {
+  background-color: rgba(0, 0, 0, 0.001);
 }
 
 .js .publication-grid.reveal,
@@ -1241,10 +1241,9 @@ a.publication-card:hover .publication-card__arrow {
     transform: none;
   }
 
-  .js .panel-media--focus-reveal.reveal,
-  .js .panel-media--focus-reveal.reveal.is-visible {
-    filter: none;
-    transform: none;
+  .js .panel-media--focus-reveal::after,
+  .js .panel-media--focus-reveal.is-visible::after {
+    background-color: rgba(0, 0, 0, 0.001);
     transition: none !important;
   }
 
