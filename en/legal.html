@@ -6,6 +6,7 @@
     <meta name="color-scheme" content="light">
     <meta name="theme-color" content="#f7f5f1">
     <meta name="referrer" content="no-referrer">
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; base-uri 'self'; connect-src 'none'; font-src 'self'; form-action 'none'; frame-src 'none'; img-src 'self' data:; object-src 'none'; script-src 'self'; style-src 'self'"
@@ -46,6 +47,8 @@
           aria-expanded="false"
           aria-controls="primary-navigation"
           aria-label="Open navigation"
+          data-label-open="Open navigation"
+          data-label-close="Close navigation"
           data-menu-toggle
         >
           <span class="nav-toggle__lines" aria-hidden="true"></span>
@@ -119,19 +122,21 @@
             <p id="contact-controller">
               Phone:
               <a
-                href="#contact-controller"
-                data-phone-link
-                data-country="49"
-                data-number="1738203427"
+                href="tel:+491738203427"
               >+49 173 820 3427</a><br>
               Email:
               <a
-                href="#contact-controller"
-                data-email-link
-                data-user="jnico"
-                data-domain="hotmail.de"
-              ><span data-contact-value>jnico [at] hotmail [dot] de</span></a>
+                href="mailto:jnico@hotmail.de"
+              >jnico@hotmail.de</a>
             </p>
+            <h3>Responsibility for journalistic-editorial content</h3>
+            <p>Responsible pursuant to section 18(2) MStV, where applicable:</p>
+            <address>
+              <strong>Nico Jungbauer</strong><br>
+              Zwinglistraße 14<br>
+              28217 Bremen<br>
+              Germany
+            </address>
             <p class="notice">
               This English version is provided for convenience. The legally relevant German
               information remains unchanged.
@@ -149,8 +154,8 @@
               Zwinglistraße 14<br>
               28217 Bremen<br>
               Germany<br>
-              Phone: +49 173 820 3427<br>
-              Email: jnico [at] hotmail [dot] de
+              Phone: <a href="tel:+491738203427">+49 173 820 3427</a><br>
+              Email: <a href="mailto:jnico@hotmail.de">jnico@hotmail.de</a>
             </address>
 
             <h3 id="hosting">2. Hosting with GitHub Pages</h3>
@@ -184,10 +189,14 @@
               reliable provision of this website.
             </p>
             <p>
-              Recipients may include GitHub, its affiliates and service providers. GitHub may
-              process data in the United States and other countries. GitHub states that it
-              relies, where applicable, on the EU-US Data Privacy Framework and the European
-              Commission’s Standard Contractual Clauses. Further information is available in
+              Recipients may include GitHub, its affiliates and service providers. Data may be
+              processed in the United States and other countries. The European Commission has
+              adopted an adequacy decision under Article 45 GDPR for transfers to US organisations
+              certified under the EU-US Data Privacy Framework. GitHub Inc. states that it is
+              certified under that framework. Where the adequacy decision does not apply, GitHub
+              states that it generally relies on the European Commission’s Standard Contractual
+              Clauses under Implementing Decision (EU) 2021/914 for international transfers.
+              Further information is available in
               <a
                 href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
                 target="_blank"
@@ -195,7 +204,15 @@
               >GitHub’s Privacy Statement<span class="visually-hidden">
                   (opens in a new tab)</span
                 ></a
-              >.
+              >. The
+              <a
+                href="https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Standard Contractual Clauses<span class="visually-hidden">
+                  (opens in a new tab)</span
+                ></a
+              > are available through the cited Implementing Decision.
             </p>
             <p>
               We do not maintain our own visitor logs. GitHub does not publish a fixed retention
@@ -237,20 +254,27 @@
 
             <h3 id="contacting">5. Contact</h3>
             <p>
-              This website does not contain a contact form. Activating an email or telephone
-              link initially only opens the relevant application configured on the visitor’s
-              device.
+              This website does not contain a contact form. Email and telephone links initially
+              only open the relevant application configured on the visitor’s device. Activating
+              a link to an external service such as WhatsApp or LinkedIn instead establishes a
+              connection to that provider. A message reaches us only when you send it there.
             </p>
             <p>
-              If you contact us by email or telephone, we process the information and message
-              you provide in order to respond. The legal basis is Article 6(1)(b) GDPR where
-              the request concerns a contract or pre-contractual steps, and otherwise Article
-              6(1)(f) GDPR. Our legitimate interest is responding appropriately to enquiries.
+              If you contact us by email, telephone, WhatsApp or through a professional network,
+              we process the contact details and message content you provide in order to respond.
+              The legal basis is Article 6(1)(b) GDPR where the request concerns a contract or
+              pre-contractual steps, and otherwise Article 6(1)(f) GDPR. Our legitimate interest
+              is responding appropriately to enquiries.
             </p>
             <p>
               Email communication currently uses a Hotmail account provided by Microsoft.
               Recipients may therefore include Microsoft Ireland Operations Limited, Microsoft
-              Corporation and their service providers. Further information is available in
+              Corporation and their service providers. Microsoft may process personal data in the
+              United States and other countries. Microsoft Corporation states that it is certified
+              under the EU-US Data Privacy Framework. Where no adequacy decision applies,
+              Microsoft identifies, in particular, the European Commission’s Standard Contractual
+              Clauses as a transfer safeguard. Further information about international transfers,
+              safeguards and data-subject rights is available in
               <a
                 href="https://www.microsoft.com/en-us/privacy/privacystatement"
                 target="_blank"
@@ -259,6 +283,34 @@
                   (opens in a new tab)</span
                 ></a
               >.
+            </p>
+            <p>
+              If you contact us through WhatsApp, we process, in particular, your telephone number,
+              profile information made available by you, timestamps and the content of your
+              message in order to respond to your enquiry. The legal bases and deletion criteria
+              described above apply. Use of WhatsApp is voluntary; you may contact us by email or
+              telephone instead.
+            </p>
+            <p>
+              For users in the European Region, WhatsApp is provided by WhatsApp Ireland Limited,
+              Merrion Road, Dublin 4, D04 X2K5, Ireland. WhatsApp may transfer data to WhatsApp
+              LLC, Meta Platforms, Inc. and other recipients in the United States or other
+              countries. WhatsApp states that it relies on the EU-US Data Privacy Framework for
+              certain US transfers and otherwise uses, in particular, Standard Contractual
+              Clauses. WhatsApp states that message content is end-to-end encrypted. Details and
+              access to the safeguards are available in
+              <a
+                href="https://www.whatsapp.com/legal/privacy-policy-eea"
+                target="_blank"
+                rel="noopener noreferrer"
+              >WhatsApp’s Privacy Policy<span class="visually-hidden">
+                  (opens in a new tab)</span
+                ></a
+              >.
+            </p>
+            <p>
+              When you contact us by telephone, the telecommunications providers involved may
+              receive connection data.
             </p>
             <p>
               Contact data is deleted once the request has been fully resolved, unless statutory

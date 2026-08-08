@@ -11,6 +11,7 @@ const closeMenu = () => {
   if (!header || !menuToggle) return;
   header.dataset.menuOpen = "false";
   menuToggle.setAttribute("aria-expanded", "false");
+  menuToggle.setAttribute("aria-label", menuToggle.dataset.labelOpen || "Open navigation");
   document.body.classList.remove("menu-locked");
 };
 
@@ -19,6 +20,12 @@ if (header && menuToggle && navigation) {
     const isOpen = header.dataset.menuOpen === "true";
     header.dataset.menuOpen = String(!isOpen);
     menuToggle.setAttribute("aria-expanded", String(!isOpen));
+    menuToggle.setAttribute(
+      "aria-label",
+      isOpen
+        ? menuToggle.dataset.labelOpen || "Open navigation"
+        : menuToggle.dataset.labelClose || "Close navigation",
+    );
     document.body.classList.toggle("menu-locked", !isOpen);
   });
 
@@ -49,6 +56,45 @@ if (header) {
   const updateHeader = () => header.classList.toggle("is-scrolled", window.scrollY > 18);
   updateHeader();
   window.addEventListener("scroll", updateHeader, { passive: true });
+}
+
+if (navigation) {
+  const sectionLinks = [...navigation.querySelectorAll('a[href^="#"]')]
+    .map((link) => ({ link, hash: link.getAttribute("href") }));
+  const trackedSections = [...document.querySelectorAll("main section[id]")];
+
+  if (sectionLinks.length && trackedSections.length) {
+    let activeFrame;
+    const updateActiveSection = () => {
+      const marker = window.innerHeight * 0.42;
+      let activeSection = null;
+
+      trackedSections.forEach((section) => {
+        if (section.getBoundingClientRect().top <= marker) activeSection = section;
+      });
+
+      const activeHash = activeSection ? `#${activeSection.id}` : "";
+      sectionLinks.forEach(({ link, hash }) => {
+        const isActive = hash === activeHash;
+        link.classList.toggle("is-active", isActive);
+        if (isActive && !link.hasAttribute("aria-current")) {
+          link.setAttribute("aria-current", "location");
+        } else if (!isActive && link.getAttribute("aria-current") === "location") {
+          link.removeAttribute("aria-current");
+        }
+      });
+      activeFrame = undefined;
+    };
+
+    const requestActiveSectionUpdate = () => {
+      if (activeFrame) return;
+      activeFrame = window.requestAnimationFrame(updateActiveSection);
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", requestActiveSectionUpdate, { passive: true });
+    window.addEventListener("resize", requestActiveSectionUpdate);
+  }
 }
 
 document.querySelectorAll("[data-current-year]").forEach((element) => {

@@ -212,6 +212,7 @@ a {
 
 .primary-nav a:hover::after,
 .primary-nav a:focus-visible::after,
+.primary-nav a.is-active::after,
 .primary-nav a[aria-current="page"]::after {
   transform: scaleX(1);
   transform-origin: left;
@@ -461,8 +462,10 @@ a {
     radial-gradient(ellipse at 15% 88%, transparent 0 21%, rgba(255, 255, 255, 0.12) 21.2% 21.35%, transparent 21.55% 100%);
 }
 
-.image-panel:hover .panel-media img {
-  transform: scale(1.025);
+@media (hover: hover) and (pointer: fine) {
+  .image-panel:hover .panel-media img {
+    transform: scale(1.025);
+  }
 }
 
 .panel--about .panel-media img {
@@ -925,13 +928,48 @@ a.publication-card:hover .publication-card__arrow {
 
 .js .reveal {
   opacity: 0;
-  transform: translateY(2rem);
-  transition: opacity 700ms var(--ease), transform 700ms var(--ease);
+  transform: translateY(0.75rem);
+  transition: opacity 560ms var(--ease), transform 560ms var(--ease);
 }
 
 .js .reveal.is-visible {
   opacity: 1;
   transform: none;
+}
+
+.js .publication-grid.reveal,
+.js .contact-list.reveal {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.js .publication-grid.reveal .publication-card,
+.js .contact-list.reveal li {
+  opacity: 0;
+  transform: translateY(0.75rem);
+  transition: opacity 520ms var(--ease), transform 520ms var(--ease);
+}
+
+.js .publication-grid.reveal.is-visible .publication-card,
+.js .contact-list.reveal.is-visible li {
+  opacity: 1;
+  transform: none;
+}
+
+.js .publication-grid.reveal.is-visible .publication-card:nth-child(2),
+.js .contact-list.reveal.is-visible li:nth-child(2) {
+  transition-delay: 70ms;
+}
+
+.js .publication-grid.reveal.is-visible .publication-card:nth-child(3),
+.js .contact-list.reveal.is-visible li:nth-child(3) {
+  transition-delay: 140ms;
+}
+
+.js .publication-grid.reveal.is-visible .publication-card:nth-child(4),
+.js .contact-list.reveal.is-visible li:nth-child(4) {
+  transition-delay: 210ms;
 }
 
 @media (max-width: 68rem) {
@@ -1187,6 +1225,11 @@ a.publication-card:hover .publication-card__arrow {
   .js .reveal {
     opacity: 1;
     transform: none;
+  }
+
+  .js .publication-grid.reveal .publication-card,
+  .js .contact-list.reveal li {
+    transition-delay: 0s !important;
   }
 }
 

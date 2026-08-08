@@ -6,6 +6,7 @@
     <meta name="color-scheme" content="light">
     <meta name="theme-color" content="#f7f5f1">
     <meta name="referrer" content="no-referrer">
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; base-uri 'self'; connect-src 'none'; font-src 'self'; form-action 'none'; frame-src 'none'; img-src 'self' data:; object-src 'none'; script-src 'self'; style-src 'self'"
@@ -46,6 +47,8 @@
           aria-expanded="false"
           aria-controls="primary-navigation"
           aria-label="Navigation öffnen"
+          data-label-open="Navigation öffnen"
+          data-label-close="Navigation schließen"
           data-menu-toggle
         >
           <span class="nav-toggle__lines" aria-hidden="true"></span>
@@ -117,19 +120,22 @@
             <p id="contact-controller">
               Telefon:
               <a
-                href="#contact-controller"
-                data-phone-link
-                data-country="49"
-                data-number="1738203427"
+                href="tel:+491738203427"
               >+49 173 820 3427</a><br>
               E-Mail:
               <a
-                href="#contact-controller"
-                data-email-link
-                data-user="jnico"
-                data-domain="hotmail.de"
-              ><span data-contact-value>jnico [at] hotmail [dot] de</span></a>
+                href="mailto:jnico@hotmail.de"
+              >jnico@hotmail.de</a>
             </p>
+
+            <h3>Verantwortlich für journalistisch-redaktionelle Inhalte</h3>
+            <p>Verantwortlich gemäß § 18 Abs. 2 MStV, soweit anwendbar:</p>
+            <address>
+              <strong>Nico Jungbauer</strong><br>
+              Zwinglistraße 14<br>
+              28217 Bremen<br>
+              Deutschland
+            </address>
           </section>
 
           <section id="datenschutz" aria-labelledby="privacy-title">
@@ -145,8 +151,8 @@
               Zwinglistraße 14<br>
               28217 Bremen<br>
               Deutschland<br>
-              Telefon: +49 173 820 3427<br>
-              E-Mail: jnico [at] hotmail [dot] de
+              Telefon: <a href="tel:+491738203427">+49 173 820 3427</a><br>
+              E-Mail: <a href="mailto:jnico@hotmail.de">jnico@hotmail.de</a>
             </address>
 
             <h3 id="hosting">2. Bereitstellung der Website über GitHub Pages</h3>
@@ -183,10 +189,15 @@
             </p>
             <p>
               Empfänger der Daten können GitHub, verbundene Unternehmen und die von GitHub
-              eingesetzten Dienstleister sein. GitHub kann Daten in den USA und anderen
-              Staaten verarbeiten. GitHub erklärt, für geeignete Übermittlungen unter anderem
-              das EU-US Data Privacy Framework und Standardvertragsklauseln der Europäischen
-              Kommission zu nutzen. Weitere Informationen enthält die
+              eingesetzten Dienstleister sein. Eine Verarbeitung kann insbesondere in den USA
+              sowie in weiteren Staaten stattfinden. Für Übermittlungen an US-Unternehmen, die
+              unter dem EU-US Data Privacy Framework zertifiziert sind, besteht ein
+              Angemessenheitsbeschluss der Europäischen Kommission gemäß Art. 45 DSGVO. GitHub
+              Inc. erklärt, unter diesem Rahmen zertifiziert zu sein. Soweit der
+              Angemessenheitsbeschluss nicht anwendbar ist, erklärt GitHub, Übermittlungen in
+              Drittländer grundsätzlich auf die Standardvertragsklauseln der Europäischen
+              Kommission gemäß Durchführungsbeschluss (EU) 2021/914 zu stützen. Weitere
+              Informationen enthält die
               <a
                 href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
                 target="_blank"
@@ -194,7 +205,15 @@
               >GitHub-Datenschutzerklärung<span class="visually-hidden">
                   (öffnet in einem neuen Tab)</span
                 ></a
-              >.
+              >. Die
+              <a
+                href="https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Standardvertragsklauseln<span class="visually-hidden">
+                  (öffnet in einem neuen Tab)</span
+                ></a
+              > sind über den genannten Durchführungsbeschluss abrufbar.
             </p>
             <p>
               Wir führen keine eigenen Besucherprotokolle. Eine feste Speicherdauer speziell
@@ -239,21 +258,29 @@
 
             <h3 id="kontaktaufnahme">5. Kontaktaufnahme</h3>
             <p>
-              Die Website enthält kein Kontaktformular. Durch das bloße Aktivieren eines
-              E-Mail- oder Telefonlinks werden noch keine Kontaktdaten an uns übertragen;
-              zunächst wird die auf Ihrem Gerät eingerichtete Anwendung geöffnet.
+              Die Website enthält kein Kontaktformular. E-Mail- und Telefonlinks öffnen zunächst
+              nur die auf Ihrem Gerät eingerichtete Anwendung. Beim Aktivieren eines Links zu
+              einem externen Dienst wie WhatsApp oder LinkedIn wird dagegen eine Verbindung zum
+              jeweiligen Anbieter hergestellt. Eine Nachricht erreicht uns erst, wenn Sie sie dort
+              absenden.
             </p>
             <p>
-              Wenn Sie uns per E-Mail oder Telefon kontaktieren, verarbeiten wir die von Ihnen
-              mitgeteilten Daten und den Inhalt Ihrer Nachricht, um Ihre Anfrage zu bearbeiten.
-              Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, soweit es um einen Vertrag oder
-              vorvertragliche Maßnahmen geht, andernfalls Art. 6 Abs. 1 lit. f DSGVO. Unser
-              berechtigtes Interesse liegt in der sachgerechten Beantwortung Ihrer Anfrage.
+              Wenn Sie uns per E-Mail, Telefon, WhatsApp oder über ein berufliches Netzwerk
+              kontaktieren, verarbeiten wir die von Ihnen mitgeteilten Kontakt- und Inhaltsdaten,
+              um Ihre Anfrage zu bearbeiten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO,
+              soweit es um einen Vertrag oder vorvertragliche Maßnahmen geht, andernfalls Art. 6
+              Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in der sachgerechten
+              Beantwortung Ihrer Anfrage.
             </p>
             <p>
               Für E-Mail-Kommunikation wird derzeit ein Hotmail-Konto und damit ein Dienst von
               Microsoft verwendet. Empfänger können deshalb Microsoft Ireland Operations
-              Limited, Microsoft Corporation und deren Dienstleister sein. Weitere Informationen
+              Limited, Microsoft Corporation und deren Dienstleister sein. Microsoft kann Daten
+              insbesondere in den USA und weiteren Staaten verarbeiten. Microsoft Corporation
+              erklärt, unter dem EU-US Data Privacy Framework zertifiziert zu sein. Soweit kein
+              Angemessenheitsbeschluss anwendbar ist, nennt Microsoft insbesondere die
+              Standardvertragsklauseln der Europäischen Kommission als Schutzgarantie. Weitere
+              Informationen zu internationalen Übermittlungen, Garantien und Betroffenenrechten
               enthält die
               <a
                 href="https://www.microsoft.com/de-de/privacy/privacystatement"
@@ -263,6 +290,35 @@
                   (öffnet in einem neuen Tab)</span
                 ></a
               >.
+            </p>
+            <p>
+              Wenn Sie über WhatsApp Kontakt aufnehmen, verarbeiten wir insbesondere Ihre
+              Telefonnummer, die von Ihnen freigegebenen Profilangaben, Zeitangaben und den Inhalt
+              Ihrer Nachricht, um Ihre Anfrage zu beantworten. Es gelten die vorstehend genannten
+              Rechtsgrundlagen und Löschkriterien. Die Nutzung von WhatsApp ist freiwillig; Sie
+              können uns alternativ per E-Mail oder Telefon kontaktieren.
+            </p>
+            <p>
+              Für Personen in der Europäischen Region wird WhatsApp von WhatsApp Ireland Limited,
+              Merrion Road, Dublin 4, D04 X2K5, Irland, bereitgestellt. WhatsApp kann Daten
+              insbesondere an WhatsApp LLC, Meta Platforms, Inc. und weitere Empfänger in den USA
+              oder anderen Staaten übermitteln. WhatsApp erklärt, für bestimmte US-Übermittlungen
+              das EU-US Data Privacy Framework und andernfalls insbesondere
+              Standardvertragsklauseln einzusetzen. Nachrichteninhalte sind nach Angaben von
+              WhatsApp Ende-zu-Ende-verschlüsselt. Einzelheiten und eine Abrufmöglichkeit der
+              Garantien enthält die
+              <a
+                href="https://www.whatsapp.com/legal/privacy-policy-eea"
+                target="_blank"
+                rel="noopener noreferrer"
+              >WhatsApp-Datenschutzrichtlinie<span class="visually-hidden">
+                  (öffnet in einem neuen Tab)</span
+                ></a
+              >.
+            </p>
+            <p>
+              Bei einer telefonischen Kontaktaufnahme können die beteiligten
+              Telekommunikationsanbieter Empfänger von Verbindungsdaten sein.
             </p>
             <p>
               Kontaktdaten werden gelöscht, sobald die Anfrage abschließend bearbeitet ist und
