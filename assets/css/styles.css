@@ -937,6 +937,11 @@ a.publication-card:hover .publication-card__arrow {
   transform: none;
 }
 
+.panel-media--focus-reveal {
+  filter: blur(0.25rem);
+  transform: scale(1.015);
+}
+
 .js .panel-media--focus-reveal::after {
   position: absolute;
   z-index: 1;
