@@ -937,6 +937,20 @@ a.publication-card:hover .publication-card__arrow {
   transform: none;
 }
 
+.js .panel-media--focus-reveal.reveal {
+  opacity: 1;
+  filter: blur(0.2rem);
+  transform: scale(1.018);
+  transition:
+    filter 850ms var(--ease),
+    transform 950ms var(--ease);
+}
+
+.js .panel-media--focus-reveal.reveal.is-visible {
+  filter: none;
+  transform: none;
+}
+
 .js .publication-grid.reveal,
 .js .contact-list.reveal {
   opacity: 1;
@@ -1225,6 +1239,13 @@ a.publication-card:hover .publication-card__arrow {
   .js .reveal {
     opacity: 1;
     transform: none;
+  }
+
+  .js .panel-media--focus-reveal.reveal,
+  .js .panel-media--focus-reveal.reveal.is-visible {
+    filter: none;
+    transform: none;
+    transition: none !important;
   }
 
   .js .publication-grid.reveal .publication-card,
