@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jungbauernico.github.io/sitemap.xml
+Sitemap: https://jungbauernico.de/sitemap.xml

@@ -30,28 +30,19 @@ Zweisprachige, responsive und barrierearme Website aus reinem HTML, CSS und Vani
 - Bleibt Hotmail/Microsoft der tatsächlich genutzte E-Mail-Anbieter?
 - Liegen die erforderlichen Nutzungsrechte an allen Bildern und Publikationsangaben vor?
 
-## Kostenlos unter jungbauernico.github.io veröffentlichen
+## Veröffentlichung unter jungbauernico.de
 
-1. Auf GitHub ein **öffentliches, leeres Repository** mit dem exakten Namen `JungbauerNico.github.io` erstellen. Beim Erstellen kein README, keine Lizenz und keine `.gitignore` hinzufügen.
-2. Diesen Ordner lokal öffnen und die Dateien auf den `main`-Branch übertragen:
+Veröffentlicht wird aus dem bestehenden Repository `JungbauerNico/JungbauerNico.github.io`. Git-Remote: `https://github.com/JungbauerNico/JungbauerNico.github.io.git`.
 
-   ```bash
-   git init -b main
-   git add .
-   git commit -m "Create bilingual portfolio website"
-   git remote add origin https://github.com/JungbauerNico/JungbauerNico.github.io.git
-   git push -u origin main
-   ```
+1. Unter **Settings → Pages → Build and deployment** die Quelle **Deploy from a branch**, den Branch **main** und den Ordner **/(root)** verwenden.
+2. GitHub Pages veröffentlicht Änderungen nach jedem Push auf `main` automatisch. Die Zieladresse nach abgeschlossener Domain-Einrichtung ist `https://jungbauernico.de/`.
+3. Unter **Settings → Pages** die Option **Enforce HTTPS** aktivieren, sobald sie verfügbar ist.
 
-3. Im Repository **Settings → Pages** öffnen. Unter **Build and deployment** als Quelle **Deploy from a branch**, den Branch **main** und den Ordner **/(root)** wählen.
-4. GitHub Pages veröffentlicht die Website nach jedem Push auf `main` automatisch. Nach erfolgreichem Lauf ist die Seite unter `https://jungbauernico.github.io/` erreichbar.
-5. Unter **Settings → Pages** die Option **Enforce HTTPS** aktivieren, sobald sie verfügbar ist.
+## Eigene Domain jungbauernico.de
 
-## Spätere eigene .de-Domain
+Die Domain `jungbauernico.de` zuerst im GitHub-Konto verifizieren und anschließend unter **Settings → Pages → Custom domain** eintragen. Erst danach die DNS-Einträge beim Registrar setzen.
 
-Die Domain zuerst im GitHub-Konto verifizieren und anschließend unter **Settings → Pages → Custom domain** eintragen. Erst danach die DNS-Einträge beim Registrar setzen.
-
-Für die Hauptdomain `beispiel.de` vier A-Records anlegen:
+Für die Hauptdomain `jungbauernico.de` vier A-Records anlegen:
 
 | Typ | Name | Wert |
 | --- | --- | --- |
@@ -60,13 +51,13 @@ Für die Hauptdomain `beispiel.de` vier A-Records anlegen:
 | A | `@` | `185.199.110.153` |
 | A | `@` | `185.199.111.153` |
 
-Für `www.beispiel.de` zusätzlich:
+Für `www.jungbauernico.de` zusätzlich:
 
 | Typ | Name | Wert |
 | --- | --- | --- |
 | CNAME | `www` | `JungbauerNico.github.io` |
 
-Optional können die von GitHub dokumentierten AAAA-Records ergänzt werden. Keine Wildcard-DNS-Einträge wie `*.beispiel.de` verwenden. DNS-Änderungen können bis zu 24 Stunden benötigen. Danach in GitHub **Enforce HTTPS** aktivieren.
+Optional können die von GitHub dokumentierten AAAA-Records ergänzt werden. Keine Wildcard-DNS-Einträge wie `*.jungbauernico.de` verwenden. DNS-Änderungen können bis zu 24 Stunden benötigen. Danach in GitHub **Enforce HTTPS** aktivieren.
 
 Bei der hier verwendeten Veröffentlichung aus dem `main`-Branch verwaltet GitHub die `CNAME`-Datei beim Speichern der Domain-Einstellung. Diese automatisch erzeugte Datei anschließend nicht löschen.
 
